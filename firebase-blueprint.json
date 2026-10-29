@@ -1,0 +1,45 @@
+{
+  "entities": {
+    "User": {
+      "collection": "users",
+      "fields": {
+        "id": "string",
+        "name": "string",
+        "email": "string",
+        "role": "string",
+        "studentCode": "string",
+        "gender": "string",
+        "minutesBalance": "number"
+      }
+    },
+    "Message": {
+      "collection": "messages",
+      "fields": {
+        "id": "string",
+        "senderId": "string",
+        "senderName": "string",
+        "recipientId": "string",
+        "text": "string",
+        "timestamp": "number",
+        "isAudio": "boolean",
+        "audioDurationSeconds": "number",
+        "isDelivered": "boolean"
+      }
+    },
+    "Transaction": {
+      "collection": "transactions",
+      "fields": {
+        "id": "string",
+        "studentId": "string",
+        "studentName": "string",
+        "studentCode": "string",
+        "packageMinutes": "number",
+        "priceEtb": "number",
+        "transactionRef": "string",
+        "paymentMethod": "string",
+        "timestamp": "number",
+        "status": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Maqraah Imam Al-Jazari",
+  "description": "Maqraah Imam Al-Jazari — Quran Recitation & Ijazah with Sanad (مَقْرَأَةُ الإِمَامِ الْجَزَرِيِّ لِلْإِقْرَاءِ وَالْإِجَازَةِ بِالسَّنَد)",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

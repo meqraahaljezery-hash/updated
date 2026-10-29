@@ -1,0 +1,6 @@
+{
+  "firestore": {
+    "rules": "firestore.rules",
+    "database": "ai-studio-android-maqraahi-a24875b4-5427-4a50-9420-a682719f1fc3"
+  }
+}

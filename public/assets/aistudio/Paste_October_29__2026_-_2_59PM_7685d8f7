@@ -1,0 +1,1362 @@
+MASTER ENGINEERING PROMPT
+
+MAQRAAH IMAM AL-JAZARI — PREMIUM ANDROID APPLICATION REDESIGN & FULL IMPLEMENTATION
+
+PROJECT IDENTITY
+
+You are not starting a new project. You are continuing and upgrading the existing Android application whose source files have already been uploaded to the project repository.
+
+You are acting as a principal Android engineer, senior full-stack engineer, product designer, UI/UX architect, database engineer, security engineer, localization specialist, real-time communications engineer, and QA automation engineer.
+
+Your mission is to transform the existing application into a polished, production-oriented Quran education and Ijazah platform.
+
+Do not merely describe what you would build. Inspect the existing files, modify the actual source code, create missing files, implement the features, run builds and tests, and document the real status.
+
+Never claim that a feature works unless you have implemented and verified it.
+
+---
+
+PART 1 — PRESERVE AND INSPECT THE EXISTING PROJECT
+
+Before modifying any code:
+
+1. Inspect the complete repository structure.
+2. Identify the actual Android technology, framework, programming language, build system, and application entry points.
+3. Inspect the existing navigation, screen components, themes, resources, localization files, database, APIs, authentication, admin features, payment flows, and CI/CD configuration.
+4. Identify which existing features are functional, which are partially implemented, which are simulations, and which are missing.
+5. Preserve all working functionality, existing application identifiers, package names, database information, and established business rules unless a specific change is necessary.
+6. Do not replace the application with a new demo, static HTML page, disconnected prototype, or unrelated project.
+7. Do not remove working features merely to make the build easier.
+8. Do not overwrite production data or destroy existing database tables.
+9. Create a prioritized implementation plan, then continue with actual implementation without stopping after presenting the plan.
+10. If the current framework is suitable, continue using it. Do not migrate to a different framework unless there is a compelling technical reason.
+
+Existing application identity:
+
+- Android package/application ID: "com.meqraa.aljezery"
+- Arabic brand: "مَقْرَأَةُ الإِمَامِ الْجَزَرِيِّ لِلْإِقْرَاءِ وَالْإِجَازَةِ بِالسَّنَد"
+- English brand: "Maqraah Imam Al-Jazari — Quran Recitation & Ijazah with Sanad"
+- Amharic brand: "መቅራአት ኢማም አል-ጀዘሪ — ቁርአን ንባብና በሰነድ ኢጃዛ"
+- Primary brand green: "#18794E"
+- Deep green: "#105C3B"
+- Soft green: "#DDF2E3"
+- Primary background: "#FFFFFF"
+
+The application is an Islamic Quran education platform specializing in recitation, Tajweed, Talqin, Qira'at, Ijazah, and Sanad.
+
+---
+
+PART 2 — PROFESSIONAL VISUAL IDENTITY
+
+Create a complete, consistent design system, not a collection of unrelated screens.
+
+2.1 Brand identity
+
+Design the application as a premium Islamic academic institution.
+
+The visual identity must communicate:
+
+- Authenticity and trust.
+- Quranic scholarship and scholarly transmission.
+- Elegance, simplicity, and modern technology.
+- Academic seriousness without looking old-fashioned.
+- Accessibility for students, teachers, and administrators.
+
+Use the existing emerald-green identity as the foundation. Refine it with carefully controlled gold accents, white surfaces, subtle neutral backgrounds, and excellent typography.
+
+Do not use excessive gradients, excessive gold, oversized decorative Islamic patterns, or unnecessary visual effects.
+
+2.2 Arabic typography
+
+Use a high-quality Arabic typeface such as Noto Sans Arabic, IBM Plex Sans Arabic, or another appropriate, properly licensed typeface available in the project.
+
+For the Arabic brand heading, evaluate a sophisticated Arabic display typeface such as Noto Naskh Arabic or a suitable Naskh-inspired font, provided it renders correctly on Android.
+
+The brand heading must:
+
+- Display the full Arabic name with correct spelling and diacritics.
+- Use balanced letter spacing and line height.
+- Never clip or incorrectly join Arabic letters.
+- Support right-to-left layout.
+- Remain legible on small screens.
+- Adapt gracefully to Arabic, Amharic, and English.
+
+Under the Arabic heading, place the English brand name in a refined, smaller, modern Latin typeface.
+
+Use the Amharic brand name where appropriate in the Amharic interface.
+
+The logo must not be recreated using ordinary text alone if a proper logo asset can be implemented. Create or refine a reusable vector or image asset using an original geometric Quran-inspired symbol, an elegant book motif, or a restrained scholarly emblem.
+
+Do not use a fake official seal, fabricated accreditation, or misleading certification mark.
+
+2.3 Design tokens
+
+Centralize the following:
+
+- Primary, secondary, accent, background, surface, and text colors.
+- Light and dark theme colors.
+- Typography scale and font weights.
+- Spacing scale.
+- Corner radii.
+- Elevation and shadows.
+- Icon sizes.
+- Standard button heights.
+- Card styles.
+- Input field styles.
+- Avatar sizes.
+- Chat bubble shapes.
+- Modal and bottom-sheet styles.
+- Loading, empty, error, and success states.
+
+Use a consistent spacing system based on 4dp increments.
+
+Support modern Android screen sizes, edge-to-edge layouts, status bars, system navigation, display cutouts, and accessibility font scaling.
+
+Prefer clean surfaces, subtle borders, restrained shadows, and purposeful animation.
+
+2.4 Splash screen and onboarding
+
+Create a professional splash screen containing the logo, Arabic name, and smaller English subtitle.
+
+Use a restrained fade or scale animation, then navigate into the application.
+
+The splash screen must not delay startup unnecessarily.
+
+Build an onboarding flow with:
+
+1. Welcome to the Maqraah.
+2. Quran recitation and Ijazah programs.
+3. Online learning and live recitation.
+4. Language selection.
+5. Sign in, registration, or guest access where supported.
+
+All onboarding content must be localized.
+
+---
+
+PART 3 — THREE-LANGUAGE LOCALIZATION
+
+Implement real application-wide localization for:
+
+- Arabic: "ar"
+- Amharic: "am"
+- English: "en"
+
+Amharic is the default language for a new user unless the user explicitly chooses another language.
+
+Persist each user's language preference.
+
+3.1 Complete translation coverage
+
+Localize every visible string, including:
+
+- Navigation labels.
+- Page titles.
+- Buttons.
+- Forms.
+- Validation errors.
+- Notifications.
+- Dialogs.
+- Empty states.
+- Loading messages.
+- Group and chat controls.
+- LiveKit connection states.
+- Payment instructions.
+- Admin screens.
+- Accessibility labels.
+- Date and time presentation.
+- Confirmation and rejection messages.
+- Network and server errors.
+
+Never hardcode user-facing text throughout UI components.
+
+Use centralized, typed localization resources appropriate to the existing framework.
+
+Provide complete translation resources for all three languages.
+
+3.2 Directionality
+
+Arabic must use RTL layout throughout the interface.
+
+Amharic and English must use LTR layout.
+
+Directionality must affect:
+
+- Navigation.
+- Back arrows.
+- Message bubbles.
+- Form alignment.
+- Icons whose meaning depends on direction.
+- Story navigation.
+- Lists.
+- Bottom navigation.
+- Dialogs.
+- Search fields.
+- Chat composers.
+- Date and time layouts.
+
+Do not mirror icons indiscriminately. Preserve the intended appearance of media controls, Quranic symbols, and other direction-independent icons.
+
+Changing the language must update the active interface immediately without requiring application reinstallation.
+
+Test mixed Arabic and Latin text, student codes, telephone numbers, and timestamps.
+
+Do not automatically translate Quranic verses, recitation text, Qira'at names, or scholarly terminology in a way that changes their meaning.
+
+Maintain consistent terminology, including:
+
+- Maqraah
+- Iqra'
+- Ijazah
+- Sanad
+- Muqri'
+- Talqin
+- Tajweed
+- Qira'at
+- Riwayah
+- Hafs
+- Warsh
+- Qalun
+- Duri
+- Susi
+- Jazariyyah
+
+---
+
+PART 4 — MAIN APPLICATION NAVIGATION
+
+Create a coherent application structure that feels natural to users familiar with modern messaging applications.
+
+Evaluate a bottom navigation bar with these primary destinations:
+
+1. Home
+2. Chats
+3. Live sessions
+4. Learning
+5. Settings
+
+The exact navigation implementation must respect the existing framework and application structure.
+
+Provide consistent page transitions, clear active navigation states, correct Android back-button behavior, and restoration of navigation state.
+
+Do not duplicate the same functionality across multiple unrelated pages.
+
+Use reusable components throughout the application.
+
+---
+
+PART 5 — HOME DASHBOARD
+
+Build a premium home dashboard personalized to the signed-in user.
+
+Include:
+
+- A compact branded header.
+- The user's avatar and display name.
+- Student code.
+- Notifications.
+- Upcoming recitation sessions.
+- The next scheduled lesson.
+- A prominent entry point for joining a scheduled live session.
+- Current credit balance and remaining minutes.
+- A quick view of active learning programs.
+- Recent messages.
+- Announcements from the Maqraah.
+- Quick actions for recitation, lessons, groups, and account settings.
+
+Display different relevant actions for students, teachers, and administrators.
+
+Do not expose administrative controls to unauthorized users.
+
+Show meaningful empty states when the user has no upcoming lessons, messages, or active programs.
+
+Every dashboard action must navigate to a real implemented destination.
+
+---
+
+PART 6 — STORIES AND STATUS SYSTEM
+
+Implement a real Stories/Status feature inspired by the familiar usability of modern messaging apps, while maintaining the Maqraah's independent identity.
+
+6.1 Stories row
+
+At the top of the Chats screen, display a horizontally scrollable row of circular avatars.
+
+Each item must support:
+
+- Profile or publisher avatar.
+- Publisher name.
+- A subtle story ring.
+- An indicator for viewed and unviewed stories.
+- A plus indicator for the current user's Add Story action.
+- A verified or teacher role indicator only when actually supported by trusted account data.
+
+Use consistent circular dimensions and spacing.
+
+Possible story categories include:
+
+- My Story.
+- Teachers.
+- Students.
+- Maqraah announcements.
+- Educational updates.
+
+Do not create fake stories or pretend that sample data is real.
+
+6.2 Publishing stories
+
+Support the following story types where technically available:
+
+- Text status.
+- Image status.
+- Short video status.
+- Audio announcement, if implemented.
+- Educational announcement.
+
+Provide a story composer with preview, caption entry, visibility settings, and a publish action.
+
+Support story expiration, preferably 24 hours after publication.
+
+Persist the publication timestamp and expiration time on the server.
+
+Expired stories must no longer appear as active stories.
+
+6.3 Story privacy
+
+Support appropriate visibility rules:
+
+- Public to the Maqraah community, if enabled.
+- Contacts or approved members.
+- Specific groups, if enabled.
+- Private to the publisher.
+
+Only authorized users may access protected story media.
+
+Track story views if enabled and authorized.
+
+Use secure media access, server-side authorization, and appropriate storage policies.
+
+Do not expose private media using permanently public URLs.
+
+6.4 Story viewer
+
+Build a full-screen story viewer with:
+
+- Progress indicators.
+- Publisher identity.
+- Media display.
+- Caption display.
+- Next and previous navigation.
+- Pause and resume.
+- Mute controls for video or audio.
+- A reply action where permitted.
+- A close button.
+- Expiration handling.
+
+Support image caching and efficient media loading.
+
+Avoid preloading excessive video data.
+
+---
+
+PART 7 — PROFESSIONAL CHAT LIST
+
+Create a chat list with the familiar usability of Telegram, but do not copy Telegram's logo, branding, or proprietary visual assets.
+
+7.1 Chat list layout
+
+Each row should include:
+
+- A circular profile or group avatar.
+- Group name or contact name.
+- Optional role or verified teacher indicator.
+- Last message preview.
+- Message timestamp.
+- Unread message count.
+- Muted indicator where applicable.
+- Pin indicator for pinned conversations.
+- Delivery or read status for the current user's last message, if supported.
+- Online status only when based on real presence data.
+
+The layout must remain visually clean and easy to scan.
+
+Support long Arabic names, Amharic text, English text, and mixed-script previews.
+
+7.2 Chat list functions
+
+Implement:
+
+- Search conversations.
+- Search contacts and groups according to permissions.
+- Pin and unpin conversations.
+- Archive and unarchive conversations.
+- Mute and unmute conversations.
+- Mark as read.
+- Unread filtering.
+- Appropriate deletion or removal controls.
+- Pull-to-refresh if suitable.
+- Pagination or efficient incremental loading.
+- Empty, loading, offline, and error states.
+
+Use confirmation dialogs for destructive operations.
+
+Persist these settings and conversation states on the backend where appropriate.
+
+Do not merely hide a row locally when the operation is expected to affect the account across devices.
+
+---
+
+PART 8 — REAL-TIME CHAT AND MESSAGING
+
+The messaging system must be functional, not simulated.
+
+8.1 Message types
+
+Implement supported message types:
+
+- Text.
+- Reply to another message.
+- Image.
+- Document or attachment.
+- Voice message.
+- Audio announcement.
+- Shared educational resource.
+- Live-session invitation.
+- System announcement.
+
+Each message must have a unique identifier, sender identifier, conversation identifier, timestamp, and appropriate content metadata.
+
+8.2 Chat interface
+
+Build a polished conversation screen containing:
+
+- A top app bar.
+- Contact or group avatar.
+- Name and online or member information where applicable.
+- Search within conversation.
+- Message history.
+- Date separators.
+- Reply previews.
+- Voice-message player.
+- Attachment previews.
+- A pinned-message area.
+- A message composer.
+- Attachment button.
+- Microphone button.
+- Send button.
+- Loading and connection indicators.
+
+Use appropriate incoming and outgoing message styles.
+
+Ensure that RTL and LTR layouts both work correctly.
+
+8.3 Real-time delivery
+
+Use the existing backend and a suitable real-time transport, such as WebSockets or an established messaging service.
+
+If the existing backend does not support real-time events, implement an appropriate authenticated service.
+
+Support:
+
+- Real message persistence.
+- Sending and receiving between separate authenticated accounts.
+- Message history after reopening the app.
+- Pagination.
+- Reconnection.
+- Duplicate-event protection.
+- Message delivery states where supported.
+- Read receipts where enabled.
+- Typing indicators where appropriate.
+- Online presence.
+- Notifications for new messages.
+
+Persist messages before treating them as successfully delivered.
+
+Handle offline sending through a local queue only if the architecture can safely reconcile pending messages.
+
+Do not use hardcoded messages or local-only state to simulate communication between real users.
+
+8.4 Voice messages
+
+Implement actual microphone recording using the appropriate Android APIs and permissions.
+
+Provide:
+
+- Recording duration.
+- Recording preview.
+- Cancel recording.
+- Send recording.
+- Playback and pause.
+- Playback position.
+- Waveform visualization where practical.
+- Upload progress.
+- Download progress.
+- Playback error handling.
+
+A decorative waveform alone is not a functional voice message.
+
+Use secure file uploads and appropriate storage access controls.
+
+Request microphone permission only when the user initiates an action requiring it.
+
+---
+
+PART 9 — GROUPS: TELEGRAM-LEVEL USABILITY
+
+Groups are a core feature of this application.
+
+Build dedicated group management and group conversation experiences.
+
+9.1 Group list
+
+Create a clear group discovery and membership interface with:
+
+- Group avatar.
+- Group name.
+- Group description.
+- Category.
+- Member count.
+- Latest message.
+- Unread count.
+- Pinned group indicator.
+- Search and filtering.
+
+Suggested categories:
+
+- Ijazah — Hafs.
+- Tajweed.
+- Talqin.
+- Quran memorization.
+- Qira'at studies.
+- General announcements.
+- Men’s learning groups.
+- Women’s learning groups.
+
+These categories are suggestions for configurable organization, not permission to expose private groups.
+
+9.2 Group profile page
+
+Every group must have its own detailed profile page.
+
+Include:
+
+- Large group avatar.
+- Group name.
+- Description.
+- Category.
+- Creation information where appropriate.
+- Member count.
+- Online member count only when based on real presence.
+- Administrators and moderators.
+- Notification settings.
+- Shared media.
+- Shared files.
+- Pinned messages.
+- Group permissions.
+- Search within group.
+- Join or leave controls where appropriate.
+
+The profile must open when the user taps the group avatar or group title in the conversation header.
+
+9.3 Group membership
+
+Implement role-based permissions such as:
+
+- Owner.
+- Administrator.
+- Moderator.
+- Teacher.
+- Member.
+
+Permissions must be enforced by the backend, not just by hiding frontend buttons.
+
+Support, where authorized:
+
+- Create group.
+- Edit group name and description.
+- Change group avatar.
+- Invite members.
+- Approve join requests.
+- Remove members.
+- Promote or demote moderators.
+- Restrict messaging.
+- Pin messages.
+- Manage announcements.
+- Leave group.
+- Delete a group only with the appropriate authority.
+
+Use a proper membership model and audit important administrative changes.
+
+9.4 Group conversations
+
+Implement:
+
+- Real-time messages.
+- Replies.
+- Attachments.
+- Voice messages.
+- Pinned messages.
+- Member profile navigation.
+- Message search.
+- Notification controls.
+- Group-specific unread counts.
+- Appropriate moderation actions.
+
+Avoid unnecessary controls on ordinary student accounts.
+
+9.5 Gender-specific groups
+
+Respect the Maqraah's existing organizational rules.
+
+Provide separate access-controlled groups for male and female students where required.
+
+Enforce membership restrictions on the server.
+
+Do not rely on frontend filtering to enforce privacy.
+
+---
+
+PART 10 — LIVEKIT: REAL LIVE RECITATION
+
+This is a mandatory feature.
+
+Replace any existing LiveKit simulation or decorative live-session screen with a genuine LiveKit integration.
+
+Do not claim that a live session is operational until a real connection has been verified.
+
+10.1 Required environment variables
+
+Inspect the current project and determine which backend is responsible for authentication and session creation.
+
+Ask the project owner to provide the required deployment configuration:
+
+- "LIVEKIT_URL"
+- "LIVEKIT_API_KEY"
+- "LIVEKIT_API_SECRET"
+
+The URL is the LiveKit server's connection URL.
+
+The API key and API secret are sensitive server-side credentials.
+
+Do not embed the API secret in Android source code, frontend configuration, APK resources, public repositories, logs, or client-side environment variables.
+
+Do not ask the owner to paste secrets into source files.
+
+Use the hosting provider's secure environment-variable configuration.
+
+If the variables are not yet available, implement the integration structure and document the missing configuration clearly. Never fabricate credentials or pretend that the service is connected.
+
+10.2 Secure token generation
+
+Implement a backend endpoint that issues LiveKit access tokens.
+
+Before issuing a token, the backend must:
+
+1. Authenticate the requesting user.
+2. Confirm that the user is allowed to access the requested room.
+3. Verify the user's role and group membership.
+4. Validate the requested room and session.
+5. Generate a short-lived token with minimum necessary permissions.
+6. Return the token securely to the authenticated client.
+
+Use the official LiveKit SDK and recommended token-generation approach appropriate to the backend language.
+
+Never trust a client-provided user role or room name without server-side validation.
+
+Do not expose API secrets through error messages or debugging output.
+
+10.3 Live recitation screen
+
+Create a dedicated live-session interface with:
+
+- Session title.
+- Teacher identity and avatar.
+- Participant count.
+- Connection status.
+- Microphone control.
+- Camera control if video is enabled.
+- Speaker or audio output control where supported.
+- Leave-session button.
+- Participant list.
+- Teacher and student role indicators.
+- Speaking indicators where supported.
+- Hand-raise feature.
+- Teacher-controlled speaking permissions.
+- Session state and error messages.
+- Reconnection handling.
+- Audio-device and permission handling.
+
+Provide a clean audio-first mode suitable for Quran recitation, with video as an optional feature.
+
+Use LiveKit's real room, participant, track, and connection APIs.
+
+10.4 Teacher controls
+
+Where supported by the architecture, implement:
+
+- Start session.
+- End session.
+- Admit authorized participants.
+- Remove participants.
+- Mute participants when authorized.
+- Grant or revoke speaking permission.
+- Manage the recitation queue.
+- Display the current reader.
+- Return to the lesson interface after the session.
+
+All privileged operations must be validated on the backend or through the appropriate authorized LiveKit controls.
+
+10.5 Real-time verification
+
+Verify:
+
+- Two separate authenticated clients can join the same authorized room.
+- Audio tracks publish and subscribe correctly.
+- Microphone permissions work.
+- Unauthorized users cannot enter protected sessions.
+- Expired tokens are rejected.
+- Network interruptions are handled gracefully.
+- Leaving the room releases tracks and resources.
+- The interface accurately reflects connection state.
+
+Do not substitute a simulated participant list for real LiveKit participants.
+
+---
+
+PART 11 — LIVE SESSION SCHEDULING
+
+Integrate live sessions with the existing Maqraah timetable.
+
+Use the "Africa/Addis_Ababa" timezone for scheduling and display.
+
+Preserve the existing schedule:
+
+Men:
+
+- Tuesday, Wednesday, Thursday.
+- Morning: 09:00–12:00.
+- Afternoon: 14:00–15:30.
+- Evening: 21:00–23:00.
+
+Women:
+
+- Saturday, Sunday, Monday.
+- Morning: 09:00–12:00.
+- Afternoon: 14:00–15:30.
+- Evening: 21:00–23:00.
+
+Friday is the regular day off.
+
+Make schedules configurable where appropriate, while preserving the existing defaults.
+
+Support:
+
+- Upcoming sessions.
+- Session reminders.
+- Teacher assignment.
+- Student eligibility.
+- Join-session availability.
+- Session status.
+- Attendance records.
+- Actual start and end times.
+
+Do not allow a user to join an unrelated or unauthorized session merely by guessing a room identifier.
+
+Ensure date and time calculations remain correct across time zones.
+
+---
+
+PART 12 — STUDENT PROFILES
+
+Create professional profile screens for students, teachers, and administrators.
+
+12.1 Student profile
+
+Include:
+
+- Profile picture.
+- Full name.
+- Student code.
+- Preferred language.
+- Gender where relevant to the program.
+- City or location where provided.
+- Registered programs.
+- Learning progress.
+- Attendance.
+- Upcoming sessions.
+- Credit balance.
+- Account status.
+- Notification settings.
+
+Do not expose private personal information to unauthorized group members.
+
+12.2 Student codes
+
+Preserve the existing code format:
+
+- "IM-xxxxx" for male students.
+- "IF-xxxxx" for female students.
+
+Generate codes securely and uniquely on the backend.
+
+Prevent duplicate codes and handle concurrent registration correctly.
+
+12.3 Teacher profiles
+
+Include:
+
+- Name and avatar.
+- Authorized teaching role.
+- Assigned programs.
+- Upcoming lessons.
+- Group memberships.
+- Relevant scholarly credentials, if verified and provided.
+- Contact or messaging actions subject to privacy rules.
+
+Never invent Ijazah credentials or scholarly qualifications.
+
+---
+
+PART 13 — SETTINGS SCREEN
+
+Build a comprehensive, visually polished settings screen.
+
+Use a clean grouped-list layout with section headers, leading icons, descriptive subtitles, trailing controls, and subtle separators.
+
+13.1 Account
+
+Include:
+
+- View profile.
+- Edit profile.
+- Change profile picture.
+- Student code.
+- Account information.
+- Sign out.
+- Account deletion request where supported.
+
+Require appropriate confirmation for destructive operations.
+
+13.2 Appearance
+
+Include:
+
+- Light theme.
+- Dark theme.
+- Follow system theme.
+- Language selection.
+- Font-size accessibility settings where appropriate.
+
+Apply theme changes consistently throughout the app.
+
+13.3 Language settings
+
+Provide a clear language selector with the actual names of the languages:
+
+- العربية
+- አማርኛ
+- English
+
+Changing language must update the entire interface immediately.
+
+Persist the preference for the authenticated user and, if appropriate, on the device for unauthenticated onboarding.
+
+13.4 Notifications
+
+Include configurable options for:
+
+- Direct messages.
+- Group messages.
+- Live-session reminders.
+- Announcements.
+- Payment notifications.
+- Administrative notifications.
+
+Respect Android notification permissions and system settings.
+
+13.5 Audio and live sessions
+
+Include:
+
+- Microphone permission status.
+- Camera permission status.
+- Audio preferences.
+- Live-session connection diagnostics.
+- Supported audio settings.
+
+Do not expose API secrets or internal server credentials.
+
+13.6 Privacy and security
+
+Include, where supported:
+
+- Blocked users.
+- Active sessions.
+- Notification privacy.
+- Profile visibility.
+- Story visibility.
+- Permission information.
+- Privacy policy.
+- Terms of service.
+
+13.7 Support and about
+
+Include:
+
+- Help and support.
+- Contact information.
+- Application version.
+- Privacy policy.
+- Terms.
+- About the Maqraah.
+- Official learning program information.
+
+Use configurable official links and verified contact details from the existing project.
+
+Do not fabricate external links.
+
+---
+
+PART 14 — WALLET AND ETHIOPIAN PAYMENTS
+
+Preserve the existing wallet and credit system.
+
+Current configured business rules:
+
+- Welcome bonus: 35 minutes, granted only once according to account eligibility.
+- 100 minutes: 500 ETB.
+- 200 minutes: 1,000 ETB.
+- 300 minutes: 1,470 ETB.
+- 400 minutes: 1,920 ETB.
+- 500 minutes: 2,350 ETB.
+- 600 minutes: 2,760 ETB.
+- 1,000 minutes: 4,500 ETB.
+
+Use server-side configuration rather than scattering these prices across UI files.
+
+14.1 Wallet interface
+
+Show:
+
+- Current balance.
+- Available minutes.
+- Recharge packages.
+- Payment instructions.
+- Transaction history.
+- Pending recharge requests.
+- Approved and rejected requests.
+- Transaction reference submission.
+
+14.2 Payment methods
+
+Preserve configurable payment instructions for:
+
+- Telebirr.
+- Commercial Bank of Ethiopia (CBE).
+
+Additional methods may be added through configuration.
+
+Do not hardcode sensitive bank information into unrelated application components.
+
+Allow administrators to configure payment instructions through a protected administrative interface or secure backend configuration.
+
+14.3 Transaction safety
+
+All balance updates must be performed transactionally on the backend.
+
+Implement:
+
+- Unique transaction identifiers.
+- Duplicate-request protection.
+- Approval and rejection records.
+- Administrator identity and timestamps.
+- An auditable credit ledger.
+- Safe handling of simultaneous requests.
+- Server-side balance calculations.
+- Appropriate validation of submitted references.
+
+Never trust the client to set its own balance.
+
+Do not claim to verify a payment directly with a provider unless an actual supported provider integration exists.
+
+---
+
+PART 15 — ADMINISTRATOR DASHBOARD
+
+Preserve the existing super-administrator configuration associated with:
+
+"khdahd241@gmail.com"
+
+Inspect the existing authentication and authorization mechanism before making changes.
+
+Do not grant administrative privileges merely because someone enters this email address into a client-side form.
+
+Use secure server-side authorization and a controlled provisioning process.
+
+Dashboard modules
+
+Provide:
+
+1. Overview.
+2. Student management.
+3. Teacher management.
+4. Group management.
+5. Lesson scheduling.
+6. Live-session management.
+7. Recharge approvals.
+8. Credit adjustments.
+9. Announcements.
+10. Reports and audit logs.
+11. Payment configuration.
+12. Application configuration.
+
+Recharge approvals
+
+Allow authorized administrators to:
+
+- View pending requests.
+- Inspect submitted transaction references.
+- Approve or reject requests.
+- Enter an appropriate rejection reason.
+- Update balances transactionally.
+- Notify students of the result.
+- Review the audit history.
+
+Credit adjustments
+
+Every manual adjustment must record:
+
+- The student.
+- The administrator.
+- The amount or minutes changed.
+- The reason.
+- The timestamp.
+- The resulting balance.
+
+Prevent duplicate approval and unauthorized adjustments.
+
+---
+
+PART 16 — BACKEND AND DATA ARCHITECTURE
+
+Inspect the existing backend before deciding what to add.
+
+Reuse the existing database and server when appropriate.
+
+Do not create a disconnected second database or a fake local backend simply to complete the UI.
+
+If backend capabilities are missing, implement the required services using a maintainable architecture compatible with the existing deployment.
+
+Required data models should cover the relevant entities:
+
+- Users.
+- Profiles.
+- Roles and permissions.
+- Student registrations.
+- Groups.
+- Group memberships.
+- Conversations.
+- Messages.
+- Attachments.
+- Stories.
+- Story views.
+- Notifications.
+- Learning programs.
+- Lesson schedules.
+- Live sessions.
+- Attendance.
+- Wallets.
+- Credit ledger.
+- Recharge requests.
+- Payment configuration.
+- Administrative audit logs.
+
+Use appropriate foreign keys, uniqueness constraints, indexes, migrations, and transaction boundaries.
+
+Define clear relationships and enforce access control.
+
+Do not store secrets, unnecessary personal information, or large media files directly in ordinary database text columns.
+
+Use an appropriate protected object-storage system for media if available.
+
+API requirements
+
+For each backend endpoint, define:
+
+- HTTP method.
+- Route.
+- Authentication requirements.
+- Authorization rules.
+- Request validation.
+- Response structure.
+- Error handling.
+- Rate limits where appropriate.
+
+Document the API contract and keep Android and backend models consistent.
+
+---
+
+PART 17 — SECURITY AND PRIVACY
+
+Security is mandatory.
+
+Implement appropriate controls for:
+
+- Authentication.
+- Authorization.
+- Role-based permissions.
+- Secure session handling.
+- Secret management.
+- Input validation.
+- File upload validation.
+- Rate limiting.
+- Database access.
+- Administrative actions.
+- Private groups.
+- Private stories.
+- LiveKit token issuance.
+- Account and session revocation.
+- Sensitive error handling.
+
+Do not log passwords, API secrets, access tokens, payment credentials, or private user content unnecessarily.
+
+Do not include production secrets in GitHub Actions logs or build artifacts.
+
+Use HTTPS for network communication.
+
+Apply least-privilege access to storage and backend services.
+
+If an existing security weakness is discovered, document and fix it without exposing secrets.
+
+---
+
+PART 18 — PERFORMANCE, ACCESSIBILITY, AND POLISH
+
+The application must remain usable on ordinary Android devices and imperfect mobile networks.
+
+Implement:
+
+- Efficient lists.
+- Image loading and caching.
+- Pagination.
+- Upload and download progress.
+- Loading skeletons where appropriate.
+- Empty states.
+- Retry actions.
+- Offline and reconnecting states.
+- Safe handling of slow network requests.
+- Proper resource cleanup.
+- Accessible touch targets.
+- Content descriptions for meaningful icons.
+- Keyboard-safe layouts.
+- Android system back behavior.
+- Correct status bar and navigation bar appearance.
+
+Avoid unnecessary animations that consume battery or interfere with Quran recitation.
+
+Never play unexpected audio automatically.
+
+Never keep the microphone active after leaving a live session unless an explicitly supported background mode requires it and the user has been informed.
+
+---
+
+PART 19 — REQUIRED SCREENS
+
+Audit the existing application and implement or improve every relevant screen below.
+
+1. Splash screen.
+2. Onboarding.
+3. Language selection.
+4. Sign in.
+5. Registration.
+6. Home dashboard.
+7. Chat list.
+8. Stories row.
+9. Story composer.
+10. Story viewer.
+11. Direct conversation.
+12. Group conversation.
+13. Group profile.
+14. Group member list.
+15. Create or edit group.
+16. Student profile.
+17. Teacher profile.
+18. Live-session list.
+19. Live recitation room.
+20. Participant list.
+21. Lesson schedule.
+22. Learning programs.
+23. Wallet.
+24. Recharge packages.
+25. Payment instructions.
+26. Recharge submission.
+27. Transaction history.
+28. Notifications.
+29. Settings.
+30. Privacy and security.
+31. Help and about.
+32. Administrator dashboard.
+33. Student administration.
+34. Recharge approvals.
+35. Credit adjustment history.
+36. Group administration.
+37. Schedule administration.
+38. Payment configuration.
+39. Application error and offline states.
+
+Do not create empty screens that only display a title.
+
+Each screen must contain functional controls, appropriate state handling, and meaningful navigation.
+
+If a backend dependency is not configured, show a truthful configuration or connection state rather than fake success.
+
+---
+
+PART 20 — AUTOMATED TESTING
+
+Create and run appropriate tests for the existing project.
+
+Build tests
+
+- Verify dependency resolution.
+- Compile the Android application.
+- Run available unit tests.
+- Run relevant instrumentation tests.
+- Verify the debug APK build.
+- Verify the existing CI workflow.
+
+Localization tests
+
+- Verify Arabic RTL.
+- Verify Amharic LTR.
+- Verify English LTR.
+- Check missing translation keys.
+- Check clipped text and layout overflow.
+- Check long group names and mixed-script content.
+
+Functional tests
+
+Test:
+
+- Registration and student code generation.
+- Authentication and account permissions.
+- Sending and receiving messages.
+- Group membership permissions.
+- Story publication and expiration.
+- Voice-message recording and playback.
+- Wallet and recharge request flows.
+- Transactional balance updates.
+- Settings persistence.
+- Language switching.
+- LiveKit room access and token expiration.
+- Live-session cleanup after leaving.
+
+Where live services or credentials are unavailable, separate unit and integration tests from real-service verification.
+
+Do not mark a real-service integration as verified merely because its code compiles.
+
+---
+
+PART 21 — IMPLEMENTATION WORKFLOW
+
+Follow this sequence:
+
+Phase 1: Repository audit
+
+Inspect the existing project and report its actual framework, modules, dependencies, and functional status.
+
+Phase 2: Design system
+
+Implement reusable branding, typography, color tokens, icons, themes, and navigation.
+
+Phase 3: Core interface
+
+Improve the dashboard, stories, chat list, group profiles, conversation screens, and settings.
+
+Phase 4: Real-time messaging
+
+Implement and test actual message persistence, delivery, media, and group membership.
+
+Phase 5: LiveKit
+
+Integrate the official SDK, secure token service, room lifecycle, audio tracks, permissions, and teacher controls.
+
+Phase 6: Localization
+
+Complete Arabic, Amharic, and English translations and test directionality across all relevant screens.
+
+Phase 7: Wallet and administration
+
+Verify payment request handling, transaction safety, role enforcement, and audit logs.
+
+Phase 8: Testing and delivery
+
+Run builds and tests, fix failures, and document the final implementation.
+
+Do not stop after any phase merely to produce a report. Continue with the next phase as far as the available tools and configuration allow.
+
+If a real blocker prevents completion, explain exactly what is missing and continue implementing all independent tasks.
+
+---
+
+PART 22 — FINAL ACCEPTANCE CRITERIA
+
+The project is not complete just because a build succeeds.
+
+The final result must satisfy these conditions:
+
+1. The existing application identity is preserved.
+2. The branding looks polished and consistent.
+3. The Arabic name is elegant and correctly rendered.
+4. The English subtitle appears beneath the Arabic name where appropriate.
+5. Stories display actual published content.
+6. The chat list presents real conversations.
+7. Group profiles display real group data.
+8. Messages persist and synchronize between authenticated users.
+9. Voice messages use real recording and playback.
+10. LiveKit uses genuine credentials and secure server-generated tokens.
+11. Authorized participants can join the same live room.
+12. Arabic, Amharic, and English work throughout the application.
+13. The settings page contains working controls.
+14. Student codes remain unique.
+15. Wallet operations are enforced on the server.
+16. Administrative privileges are securely enforced.
+17. The application handles loading, offline, and error states.
+18. The project builds successfully.
+19. Relevant automated tests pass.
+20. Any unverified feature is clearly identified.
+
+FINAL REPORT FORMAT
+
+When the work is finished, provide:
+
+- The actual changes made.
+- The files created and modified.
+- The architecture and dependencies used.
+- The screens implemented.
+- The backend endpoints and database migrations added.
+- The environment variables required.
+- The exact LiveKit configuration still needed, if any.
+- The build and test results.
+- Any remaining blockers.
+- A clear distinction between implemented, tested, and verified features.
+
+Do not fabricate test results, successful deployments, working integrations, or generated files.
+
+FINAL INSTRUCTION
+
+Start by examining the existing uploaded project files.
+
+Then improve and implement the actual project, preserving all working features.
+
+Prioritize a premium visual identity, Telegram-level chat and group usability, real Stories, genuine LiveKit recitation rooms, complete Arabic/Amharic/English localization, secure backend functionality, and a professional settings experience.
+
+Do not stop at a design proposal. Make the actual code changes, build the application, test it, and report honestly on what has been completed.
+
+If credentials, service access, or external configuration are missing, implement everything that can be completed safely and identify the exact remaining requirements.
+
+The goal is a professional, reliable Android application worthy of the name:
+
+مَقْرَأَةُ الإِمَامِ الْجَزَرِيِّ لِلْإِقْرَاءِ وَالْإِجَازَةِ بِالسَّنَد
+
+Maqraah Imam Al-Jazari — Quran Recitation & Ijazah with Sanad

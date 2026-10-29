@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Maqraah Al-Jazari</string>
+    <string name="brand_subtitle">Quran Recitation &amp; Ijazah with Sanad</string>
+    <string name="tab_chats">Chats</string>
+    <string name="tab_learning">Learning</string>
+    <string name="tab_wallet">Wallet</string>
+    <string name="tab_admin">Admin</string>
+    <string name="tab_profile">Profile</string>
+    <string name="welcome_title">Maqraah Imam Al-Jazari</string>
+    <string name="login_google">Continue with Google</string>
+    <string name="login_demo">Quick Demo Login</string>
+    <string name="student_code">Student Code</string>
+    <string name="minutes_balance">Available Minutes</string>
+    <string name="buy_minutes">Buy Minutes</string>
+    <string name="telebirr_instructions">Telebirr Account: 0911000000 (Maqraah Al-Jazari)</string>
+    <string name="cbe_instructions">Commercial Bank of Ethiopia (CBE): 1000000000000</string>
+    <string name="send_proof">Submit Payment Proof</string>
+    <string name="schedule_title">Weekly Lesson Schedule</string>
+    <string name="audio_lesson">Record &amp; Submit Audio Lesson</string>
+    <string name="admin_approvals">Pending Recharges &amp; Approvals</string>
+</resources>

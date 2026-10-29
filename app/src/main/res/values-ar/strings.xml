@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">مقراة الإمام الجزري</string>
+    <string name="brand_subtitle">الإقراء والإجازة بالسند المتصل</string>
+    <string name="tab_chats">المحادثات</string>
+    <string name="tab_learning">التعليم</string>
+    <string name="tab_wallet">المحفظة</string>
+    <string name="tab_admin">الإدارة</string>
+    <string name="tab_profile">الملف الشخصي</string>
+    <string name="welcome_title">مقراة الإمام الجزري</string>
+    <string name="login_google">المتابعة بواسطة جوجل</string>
+    <string name="login_demo">تسجيل دخول تجريبي سريع</string>
+    <string name="student_code">كود الطالب</string>
+    <string name="minutes_balance">الدقائق المتاحة</string>
+    <string name="buy_minutes">شراء دقائق</string>
+    <string name="telebirr_instructions">رقم تليبير للتحويل: 0911000000 (مقراة الجزري)</string>
+    <string name="cbe_instructions">حساب البنك التجاري الإثيوبي (CBE): 1000000000000</string>
+    <string name="send_proof">إرسال إثبات التحويل</string>
+    <string name="schedule_title">جدول الدروس الأسبوعي</string>
+    <string name="audio_lesson">تسجيل وإرسال الدرس الصوتي</string>
+    <string name="admin_approvals">طلبات الشحن والطلاب المعلقة</string>
+</resources>

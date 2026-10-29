@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">መቅራአት አል-ጀዘሪ</string>
+    <string name="brand_subtitle">ቁርአን ንባብና በሰነድ ኢጃዛ</string>
+    <string name="tab_chats">ውይይቶች</string>
+    <string name="tab_learning">ትምህርት</string>
+    <string name="tab_wallet">ቦርሳ</string>
+    <string name="tab_admin">አስተዳዳሪ</string>
+    <string name="tab_profile">መገለጫ</string>
+    <string name="welcome_title">መቅራአት ኢማም አል-ጀዘሪ</string>
+    <string name="login_google">በ Google ይግቡ</string>
+    <string name="login_demo">ፈጣን የማሳያ መግቢያ</string>
+    <string name="student_code">የተማሪ መለያ ኮድ</string>
+    <string name="minutes_balance">የቀሩ ደቂቃዎች</string>
+    <string name="buy_minutes">ደቂቃዎችን ይግዙ</string>
+    <string name="telebirr_instructions">የቴሌብር (Telebirr) መክፈያ ቁጥር: 0911000000 (አል-ጀዘሪ መቅራአት)</string>
+    <string name="cbe_instructions">የንግድ ባንክ (CBE) አካውንት: 1000000000000</string>
+    <string name="send_proof">የክፍያ ማረጋገጫ አስገባ</string>
+    <string name="schedule_title">የሳምንት ትምህርት መርሃ ግብር</string>
+    <string name="audio_lesson">የድምጽ ትምህርት መቅረጫ</string>
+    <string name="admin_approvals">የክፍያ እና ተማሪ ማጽደቂያ</string>
+</resources>
